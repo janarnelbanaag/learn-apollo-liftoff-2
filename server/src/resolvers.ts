@@ -4,4 +4,9 @@ export const resolvers = {
 			return dataSources.trackAPI.getTracksForHome();
 		},
 	},
+	Track: {
+		author: ({ authorId }, _, { dataSources }) => {
+			return dataSources.trackAPI.getAuthor(authorId);
+		},
+	},
 };
